@@ -7,7 +7,7 @@ ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 ### Git [±master ▾●]
 
-ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[green]%}±%{$reset_color%}%{$fg_bold[white]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="[%{$fg_bold[green]%}± %{$reset_color%}%{$fg_bold[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}]"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[cyan]%}▴%{$reset_color%}"
@@ -78,16 +78,17 @@ bureau_git_prompt () {
 }
 
 
-_PATH="%{$fg_bold[white]%}%~%{$reset_color%}"
+_PATH="%{$fg_bold[yellow]%}%~%{$reset_color%}"
 
 if [[ $EUID -eq 0 ]]; then
   _USERNAME="%{$fg_bold[red]%}%n"
   _LIBERTY="%{$fg[red]%}#"
 else
-  _USERNAME="%{$fg_bold[white]%}%n"
-  _LIBERTY="%{$fg[green]%}$"
+  _USERNAME="%{$fg_bold[green]%}%n"
+  _LIBERTY="%{$fg[red]%}⚡ "
 fi
-_USERNAME="$_USERNAME%{$reset_color%}@%m"
+#_USERNAME="$_USERNAME%{$reset_color%}@%m"
+_USERNAME="$_USERNAME"
 _LIBERTY="$_LIBERTY%{$reset_color%}"
 
 
@@ -107,6 +108,7 @@ get_space () {
 }
 
 _1LEFT="$_USERNAME $_PATH"
+#_1LEFT="$_PATH"
 _1RIGHT="[%*] "
 
 bureau_precmd () {
@@ -116,7 +118,8 @@ bureau_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='> $_LIBERTY '
+#PROMPT='> $_LIBERTY '
+PROMPT='$_LIBERTY '
 RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
