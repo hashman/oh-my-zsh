@@ -1,0 +1,21 @@
+# some common alias
+alias ll='ls -al'
+alias skype2='sudo /Applications/Skype.app/Contents/MacOS/Skype /secondary'
+
+# git alias
+alias commit_code='git add -A && git commit -m "update code"'
+alias tmp='git stash --include-untracked'
+
+# php alias
+alias check_php_code='vendor/bin/phpcs.phar -a --colors --report=checkstyle --standard=./phpcsCodingStandard.xml --extensions=php --ignore=autoload.php --ignore=vendor'
+alias laravel='~/.composer/vendor/bin/laravel'
+alias php56_composer='/Applications/MAMP/bin/php/php5.6.10/bin/php /usr/local/bin/composer install'
+
+# sublime for MacOS
+alias sub_user='cd ~/Library/Application Support/Sublime Text 3/Packages/User';
+
+# phpstorm for MacOS
+alias phpstorm='/Applications/PhpStorm.app/Contents/MacOS/phpstorm'
+
+# python code
+alias json='python -m json.tool'
