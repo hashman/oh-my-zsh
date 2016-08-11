@@ -1,3 +1,7 @@
+# some shell script
+ln -s ~/.oh-my-zsh/config/.tigrc ~/
+
+
 # some common alias
 alias ll='ls -al'
 alias skype2='sudo /Applications/Skype.app/Contents/MacOS/Skype /secondary'
