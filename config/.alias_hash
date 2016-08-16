@@ -1,11 +1,11 @@
 # some shell script
 ln -s ~/.oh-my-zsh/config/.tigrc ~/
 
-
 # some common alias
 alias ll='ls -al'
 alias skype2='sudo /Applications/Skype.app/Contents/MacOS/Skype /secondary'
 alias fix-alias='vim ~/.oh-my-zsh/config/.alias_hash'
+alias tt='ping 8.8.8.8'
 
 # git alias
 alias commit_code='git add -A && git commit -m "update code"'
