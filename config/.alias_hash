@@ -40,3 +40,6 @@ alias phpstorm='/Applications/PhpStorm.app/Contents/MacOS/phpstorm'
 
 # python code
 alias json='python -m json.tool'
+
+# git alias
+alias ddbr='current_branch=`git rev-parse --abbrev-ref HEAD` && git co staging && git branch -D $current_branch'
