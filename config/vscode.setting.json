@@ -5,6 +5,7 @@
     "editor.renderIndentGuides": true,
     // 控制編輯器換行到下一行的字元數。若將此項目設為 0，將會開啟檢視區寬度換行 (自動換行)。若將此項目設為 -1，將會強制編輯器永不換行。
     "editor.wrappingColumn": 0,
+    "editor.lineHeight": 27,
     // Whether the php-cs-fixer library has been installed using Composer. If true, the extension will override pharPath and assume you have added Composer to your PATH.
     "phpformatter.composer": true,
 
