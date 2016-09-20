@@ -1,5 +1,5 @@
 # some shell script
-ln -s ~/.oh-my-zsh/config/.tigrc ~/
+#ln -s ~/.oh-my-zsh/config/.tigrc ~/
 
 # some common alias
 alias ll='ls -al'

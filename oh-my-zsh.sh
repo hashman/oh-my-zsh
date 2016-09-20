@@ -111,3 +111,6 @@ else
     fi
   fi
 fi
+
+# copy global gitignore file to home path
+cp ~/.oh-my-zsh/config/.gitignore_global ~/.gitignore_global
