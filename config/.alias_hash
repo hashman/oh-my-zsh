@@ -1,6 +1,11 @@
 # some shell script
 #ln -s ~/.oh-my-zsh/config/.tigrc ~/
 
+# tmux alias
+alias tls='tmux ls'
+alias tc='tmux new-session -s '
+alias td='tmux attach-session -t'
+
 # some common alias
 alias ll='ls -al'
 alias skype2='sudo /Applications/Skype.app/Contents/MacOS/Skype /secondary'
