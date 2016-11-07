@@ -16,7 +16,7 @@ alias tt='ping 8.8.8.8'
 
 diff_with_filename() {
     current_branch=`git rev-parse --abbrev-ref HEAD`
-    git diff $current_branch $1 --name-only
+    git diff $1 $current_branch --name-only
 }
 
 alias commit_code='git add -A && git commit -m "update code"'
