@@ -55,3 +55,6 @@ alias phpstorm='/Applications/PhpStorm.app/Contents/MacOS/phpstorm'
 
 # python code
 alias json='python -m json.tool'
+
+# php
+alias tdd='./vendor/bin/phpunit --stop-on-failure'
