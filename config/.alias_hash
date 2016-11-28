@@ -60,3 +60,4 @@ alias json='python -m json.tool'
 # php
 alias tdd='./vendor/bin/phpunit --stop-on-failure'
 alias tddw='./vendor/bin/phpunit --stop-on-failure --no-coverage'
+alias tddc='./vendor/bin/phpunit --stop-on-failure --coverage-html build/coverage'
