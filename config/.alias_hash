@@ -32,6 +32,7 @@ alias gpick='git cherry-pick'
 alias fixup='git add . && git ci -m "fixup"'
 alias ddbr='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout staging && git branch -D $current_branch'
 alias ddbrd='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout develop && git branch -D $current_branch'
+alias ddbrm='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout master && git branch -D $current_branch'
 alias gpc='git push origin $(git_current_branch)'
 alias gpfc='git push -f origin $(git_current_branch)'
 alias gdof=diff_with_filename
