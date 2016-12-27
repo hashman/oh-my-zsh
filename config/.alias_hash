@@ -5,6 +5,7 @@
 alias tls='tmux ls'
 alias tc='tmux new-session -s '
 alias td='tmux attach-session -t'
+alias takeover='tmux detach -a'
 
 # some common alias
 alias ll='ls -al'
