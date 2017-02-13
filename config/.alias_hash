@@ -12,6 +12,9 @@ alias ll='ls -al'
 alias skype2='sudo /Applications/Skype.app/Contents/MacOS/Skype /secondary'
 alias fix-alias='vim ~/.oh-my-zsh/config/.alias_hash'
 alias tt='ping 8.8.8.8'
+hgrep() {
+    grep -irn $1 --exclude-dir={vendor,node_modules,build,storage} $2
+}
 
 # git alias
 
