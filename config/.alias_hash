@@ -24,6 +24,10 @@ diff_with_filename() {
     git diff $1 $current_branch --name-only
 }
 
+function perf {
+  curl -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
+}
+
 alias commit_code='git add -A && git commit -m "update code"'
 alias tmp='git stash --include-untracked'
 alias gpush='git push'
@@ -44,6 +48,7 @@ alias gpc_hash='git push hash $(git_current_branch)'
 alias gpfc='git push -f origin $(git_current_branch)'
 alias gpfc_hash='git push -f hash $(git_current_branch)'
 alias gdof=diff_with_filename
+alias curl_time=perf
 
 # php alias
 alias check_php_code='vendor/bin/phpcs.phar -a --colors --report=checkstyle --standard=./phpcsCodingStandard.xml --extensions=php --ignore=autoload.php --ignore=vendor'
