@@ -50,6 +50,7 @@ alias gpfc='git push -f origin $(git_current_branch)'
 alias gpfc_hash='git push -f hash $(git_current_branch)'
 alias gdof=diff_with_filename
 alias curl_time=perf
+alias gls='git log --graph --pretty=format:"%h <%an> %ar %s"'
 
 # php alias
 alias check_php_code='vendor/bin/phpcs.phar -a --colors --report=checkstyle --standard=./phpcsCodingStandard.xml --extensions=php --ignore=autoload.php --ignore=vendor'
