@@ -56,9 +56,7 @@ alias gtags='git tag --sort=-creatordate'
 # php alias
 alias check_php_code='vendor/bin/phpcs.phar -a --colors --report=checkstyle --standard=./phpcsCodingStandard.xml --extensions=php --ignore=autoload.php --ignore=vendor'
 alias laravel='~/.composer/vendor/bin/laravel'
-alias php56_composer='/Applications/MAMP/bin/php/php5.6.10/bin/php /usr/local/bin/composer install'
-alias phpunit-report-runtime="phpunit --log-json php://stdout \
-    | awk '\$NF ~ '/,/' && \$1 ~ /\"(test|time)\"/' \
+alias php56_composer='/Applications/MAMP/bin/php/php5.6.10/bin/php /usr/local/bin/composer install' alias phpunit-report-runtime="phpunit --log-json php://stdout \ | awk '\$NF ~ '/,/' && \$1 ~ /\"(test|time)\"/' \
     | cut -d: -f2- \
     | sed \"N;s/\n/--/\"  \
     | sed \"s/,//\"   \
@@ -87,3 +85,9 @@ alias hexo_deploy='hexo clean && hexo g && hexo d'
 
 # brew
 alias brew_update='brew update && brew upgrade && brew cleanup'
+
+# Tool
+get_zipcode() {
+    curl http://zipcode.mosky.tw/api/find?address=$1
+}
+alias zipcode=get_zipcode
