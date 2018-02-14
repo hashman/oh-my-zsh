@@ -90,3 +90,16 @@ alias docker_log='sh ~/.oh-my-zsh/hash_bin/docker-log.sh'
 
 # brew
 alias brew_update='brew update && brew upgrade && brew cleanup'
+
+# curl
+curl_time() {
+    curl -so /dev/null -w "\
+   namelookup:  %{time_namelookup}s\n\
+      connect:  %{time_connect}s\n\
+   appconnect:  %{time_appconnect}s\n\
+  pretransfer:  %{time_pretransfer}s\n\
+     redirect:  %{time_redirect}s\n\
+starttransfer:  %{time_starttransfer}s\n\
+-------------------------\n\
+        total:  %{time_total}s\n" "$@"
+}
