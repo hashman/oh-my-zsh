@@ -73,9 +73,9 @@ alias phpstorm='/Applications/PhpStorm.app/Contents/MacOS/phpstorm'
 alias json='python -m json.tool'
 
 # php
-alias tdd='./vendor/bin/phpunit --stop-on-failure'
-alias tddw='./vendor/bin/phpunit --stop-on-failure --no-coverage'
-alias tddc='./vendor/bin/phpunit --stop-on-failure --coverage-html build/coverage'
+alias tdd='php -d memory_limit=-1 ./vendor/bin/phpunit --stop-on-failure'
+alias tddw='php -d memory_limit=-1 ./vendor/bin/phpunit --stop-on-failure --no-coverage'
+alias tddc='php -d memory_limit=-1 ./vendor/bin/phpunit --stop-on-failure --coverage-html build/coverage'
 
 # mac only
 alias folder_size='find . -maxdepth 1 -type d -mindepth 1 -exec du -hs {} \;'
