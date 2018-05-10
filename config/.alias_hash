@@ -36,6 +36,10 @@ traveling() {
     for i in $(seq $1 $2); do echo "==== $3-$i ====" && ssh $3-$i $4; done;
 }
 
+ddbr() {
+    current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout $1 && git branch -D $current_branch
+}
+
 alias commit_code='git add -A && git commit -m "update code"'
 alias tmp='git stash --include-untracked'
 alias gpush='git push'
@@ -47,7 +51,8 @@ alias ga='git add .'
 alias gref='git reflog'
 alias gpick='git cherry-pick'
 alias fixup='git add . && git commit -m "fixup"'
-alias ddbr='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout staging && git branch -D $current_branch'
+alias ddbr=ddbr
+alias ddbrs='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout staging && git branch -D $current_branch'
 alias ddbrd='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout develop && git branch -D $current_branch'
 alias ddbrt='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout testing && git branch -D $current_branch'
 alias ddbrm='current_branch=`git rev-parse --abbrev-ref HEAD` && git checkout master && git branch -D $current_branch'
@@ -73,7 +78,7 @@ alias php56_composer='/Applications/MAMP/bin/php/php5.6.10/bin/php /usr/local/bi
     | head -n 10"
 
 # sublime for MacOS
-alias sub_user='cd ~/Library/Application Support/Sublime Text 3/Packages/User';
+alias sub_user='cd ~/Library/Application Support/Sublime Text 3/Packages/User'
 
 # phpstorm for MacOS
 alias phpstorm='/Applications/PhpStorm.app/Contents/MacOS/phpstorm'
