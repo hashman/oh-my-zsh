@@ -1,0 +1,29 @@
+// 將您的設定放入此檔案中以覆寫預設值
+{
+    "**/*.js": { "when": "$(basename).ts"},
+    "editor.fontSize": 14,
+    "editor.renderIndentGuides": true,
+    // 控制編輯器換行到下一行的字元數。若將此項目設為 0，將會開啟檢視區寬度換行 (自動換行)。若將此項目設為 -1，將會強制編輯器永不換行。
+    "editor.wrappingColumn": 0,
+    "editor.lineHeight": 27,
+    // Whether the php-cs-fixer library has been installed using Composer. If true, the extension will override pharPath and assume you have added Composer to your PATH.
+    "phpformatter.composer": true,
+
+    // Whether files should be fixed on save.
+    "phpformatter.onSave": true,
+
+    // 控制已變更檔案的自動儲存功能。接受的值: "off"、"afterDelay"、"onFocusChange"。如果設定為 "afterDelay"，您可以在 "files.autoSaveDelay" 中設定延遲時間。
+    "files.autoSave": "onFocusChange",
+
+    "php.validate.run": "onType",
+
+    // 將檔案關聯設定為語言 (例如 "*.extension": "html")。這些語言優先於已安裝語言的預設關聯。
+    "files.associations": {"*.cron": "php"},
+
+    // 設定 Glob 模式，以排除不要搜尋的檔案及資料夾。請從 file.exclude 設定繼承所有的 Glob 模式。
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/vendor": true
+    }
+}
