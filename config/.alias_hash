@@ -13,7 +13,7 @@ alias skype2='sudo /Applications/Skype.app/Contents/MacOS/Skype /secondary'
 alias fix-alias='vim ~/.oh-my-zsh/config/.alias_hash'
 alias tt='ping 8.8.8.8'
 hgrep() {
-    grep -irn $1 --exclude-dir={vendor,node_modules,build,storage} $2
+    grep -irn $1 --exclude-dir={vendor,node_modules,build,storage,public} $2
 }
 alias get_cqd_bar='wget https://gist.githubusercontent.com/CQD/eac9e8619a72aa56e5a9a51b8ee8b3b3/raw/3bbcec298a78f4fa1413015c82a63ae2318fcd9f/Bar.php'
 
