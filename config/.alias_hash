@@ -17,6 +17,11 @@ hgrep() {
 }
 alias get_cqd_bar='wget https://gist.githubusercontent.com/CQD/eac9e8619a72aa56e5a9a51b8ee8b3b3/raw/3bbcec298a78f4fa1413015c82a63ae2318fcd9f/Bar.php'
 
+# docker
+docker_tags() {
+    wget -q https://registry.hub.docker.com/v1/repositories/$1/tags -O - | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n' | awk -F: '{print $3}'
+}
+
 # git alias
 
 tagged() {
