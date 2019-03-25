@@ -82,7 +82,7 @@ deploy() {
     then
         TAG_NAME=$3
     else
-        NOW=$(date +"%Y%m%d_$k$M")
+        NOW=$(date +"%Y%m%d_%k%M")
         TAG_NAME="tested_$NOW"
     fi
     TARGET_COMMIT=$1
